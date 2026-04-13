@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "log.folder",
+    "type": "java.lang.String",
+    "description": "A description for 'log.folder'"
+  },
+  {
+    "name": "security.bucket.rateLimit",
+    "type": "java.lang.String",
+    "description": "A description for 'security.bucket.rateLimit'"
+  },
+  {
+    "name": "security.bucket.windowMinutes",
+    "type": "java.lang.String",
+    "description": "A description for 'security.bucket.windowMinutes'"
+  },
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.secret'"
+  },
+  {
+    "name": "app.cors.allowed-origins",
+    "type": "java.lang.String",
+    "description": "A description for 'app.cors.allowed-origins'"
+  }
+]}

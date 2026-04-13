@@ -1,0 +1,126 @@
+{
+  "commons": {
+    "save": "Guardar",
+    "export": "Exportar",
+    "cancel": "Cancelar"
+  },
+  "others": {
+    "close-modal": "Cerrar modal",
+    "export-pdf": "Exportar a PDF",
+    "export-csv": "Exportar a CSV"
+  },
+  "home": {
+    "title": "Página principal",
+    "welcome": "Bienvenido a la página principal",
+    "description": "Este es un ejemplo sencillo de un componente Home.",
+    "extra": "Puedes añadir más contenido aquí según necesites.",
+    "goToLogin": "Ir a iniciar sesión"
+  },
+  "register": {
+    "formLabel": "Formulario de registro",
+    "title": "Crear cuenta",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "nameMin": "El nombre es demasiado corto",
+    "surnames": "Apellidos",
+    "surnamesPlaceholder": "Tus apellidos",
+    "surnamesMin": "Los apellidos son demasiado cortos",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "emailInvalid": "Correo electrónico inválido",
+    "phone": "Teléfono",
+    "phonePlaceholder": "Tu teléfono",
+    "phoneMin": "Teléfono inválido",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Tu contraseña",
+    "passwordMin": "La contraseña es demasiado corta",
+    "submit": "Registrarse",
+    "submitting": "Registrando...",
+    "success": "Registro completado correctamente",
+    "invalidData": "Datos inválidos",
+    "emailExists": "El correo ya está registrado",
+    "serverError": "Error del servidor",
+    "unknownError": "Error desconocido",
+    "goLogin": "¿Ya tienes cuenta? Inicia sesión",
+    "goHome": "Volver al inicio"
+  },
+  "login": {
+    "formLabel": "Formulario de inicio de sesión",
+    "title": "Iniciar Sesión",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "correo@ejemplo.com",
+    "password": "Contraseña",
+    "passwordPlaceholder": "********",
+    "submit": "Ingresar",
+    "submitting": "Ingresando...",
+    "success": "Inicio de sesión exitoso",
+    "invalidCredentials": "Credenciales incorrectas",
+    "serverError": "Error interno del servidor",
+    "tooManyAttempts": "Demasiados intentos. Intenta de nuevo en {{time}}",
+    "unknownError": "Error desconocido al iniciar sesión",
+    "goHome": "Ir a la página principal",
+    "forgotPassword": "He olvidado la contraseña",
+    "emailInvalid": "Correo electrónico inválido",
+    "passwordMin": "La contraseña debe tener al menos 3 caracteres",
+    "register": "Registrar"
+  },
+  "header": {
+    "title": "Título",
+    "profile": "Ir al perfil",
+    "logout": "Cerrar sesión",
+    "userFallback": "Usuario"
+  },
+  "menu": {
+    "open": "Abrir menú",
+    "close": "Cerrar menú",
+    "navigation": "Navegación principal",
+    "closeNavigation": "Cerrar navegación",
+    "collapse": "Colapsar",
+    "expand": "Expandir",
+    "sections": {
+      "users": "Usuarios",
+      "only-user": "Solo usuarios",
+      "only-admin": "Solo administradores",
+      "admin-user": "Todos"
+    }
+  },
+  "profile": {
+    "notifications": "Notificaciones",
+    "notificationsPlaceholder": "Aquí irían tus notificaciones",
+    "verified": "Verificado",
+    "verify": "Verificar",
+    "menu": "Menú de perfil",
+    "my-data": {
+      "title": "Mis datos",
+      "name": "Nombre",
+      "surnames": "Apellidos",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "save": "Guardar",
+      "changePassword": "Cambiar contraseña",
+      "nameMin": "El nombre debe tener al menos 2 caracteres",
+      "surnamesMin": "Los apellidos deben tener al menos 2 caracteres",
+      "phoneMin": "El teléfono debe tener al menos 5 caracteres"
+    },
+    "preferences": {
+      "title": "Preferencias",
+      "language": "Idioma",
+      "theme": "Tema",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema",
+      "spanish": "Español",
+      "english": "Inglés",
+      "emailNotifications": "Recibir notificaciones por correo electrónico"
+    }
+  },
+  "only-user": {
+    "view": "Vista solo para usuarios"
+  },
+  "only-admin": {
+    "view": "Vista solo para administradores"
+  },
+  "view-admin-user": {
+    "view": "Vista para usuarios y administradores"
+  }
+}

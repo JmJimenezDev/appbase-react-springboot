@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  input,
+  textarea,
+  select {
+    @apply text-sm
+         bg-neutral-100 dark:bg-neutral-900
+         border border-neutral-300 dark:border-neutral-700
+         text-neutral-900 dark:text-neutral-100
+         rounded-md
+         px-1 py-1
+         outline-none
+         transition;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-neutral-500 dark:text-neutral-400;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply border-black dark:border-white
+         ring-1 ring-black dark:ring-white;
+  }
+
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply size-4
+         accent-black dark:accent-white
+         cursor-pointer;
+  }
+
+  select {
+    @apply cursor-pointer;
+  }
+
+  button {
+    @apply text-sm cursor-pointer transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500;
+  }
+
+  button:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  button.primary {
+    @apply px-5 py-1 rounded-md bg-black text-white;
+  }
+
+  .dark button.primary {
+    @apply bg-white text-black;
+  }
+
+  button.secondary {
+    @apply px-5 py-1 rounded-md bg-neutral-400 text-neutral-900;
+  }
+
+  .dark button.secondary {
+    @apply bg-neutral-700 text-neutral-100;
+  }
+
+  input[type="date"],
+  input[type="datetime-local"] {
+    @apply cursor-pointer;
+  }
+
+  label {
+    @apply text-sm font-medium text-neutral-600 dark:text-neutral-400;
+  }
+}

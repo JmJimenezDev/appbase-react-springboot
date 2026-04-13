@@ -1,0 +1,37 @@
+# IDE
+.vscode/
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# Node
+node_modules/
+*.local
+
+# Logs
+logs/
+*.log
+
+# Node (used by maven plugins)
+node/
+
+# Test logs
+LOG_FOLDER_IS_UNDEFINED/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache

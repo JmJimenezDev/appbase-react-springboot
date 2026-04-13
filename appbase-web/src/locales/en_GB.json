@@ -1,0 +1,126 @@
+{
+  "commons": {
+    "save": "Save",
+    "export": "Export",
+    "cancel": "Cancel"
+  },
+  "others": {
+    "close-modal": "Close modal",
+    "export-pdf": "Export to PDF",
+    "export-csv": "Export to CSV"
+  },
+  "home": {
+    "title": "Home Page",
+    "welcome": "Welcome to the home page!",
+    "description": "This is a simple example of a home page component.",
+    "extra": "You can add more content here as needed.",
+    "goToLogin": "Go to Login"
+  },
+  "register": {
+    "formLabel": "Register form",
+    "title": "Create account",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "nameMin": "Name is too short",
+    "surnames": "Surnames",
+    "surnamesPlaceholder": "Your surnames",
+    "surnamesMin": "Surnames are too short",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "emailInvalid": "Invalid email",
+    "phone": "Phone",
+    "phonePlaceholder": "Your phone",
+    "phoneMin": "Invalid phone number",
+    "password": "Password",
+    "passwordPlaceholder": "Your password",
+    "passwordMin": "Password is too short",
+    "submit": "Register",
+    "submitting": "Registering...",
+    "success": "Registration successful",
+    "invalidData": "Invalid data",
+    "emailExists": "Email already exists",
+    "serverError": "Server error",
+    "unknownError": "Unknown error",
+    "goLogin": "Already have an account? Log in",
+    "goHome": "Go home"
+  },
+  "login": {
+    "formLabel": "Login form",
+    "title": "Login",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "********",
+    "submit": "Sign In",
+    "submitting": "Signing in...",
+    "success": "Login successful",
+    "invalidCredentials": "Invalid credentials",
+    "serverError": "Internal server error",
+    "tooManyAttempts": "Too many attempts. Try again in {{time}}",
+    "unknownError": "Unknown error during login",
+    "goHome": "Go to Home",
+    "forgotPassword": "Forgot Password?",
+    "emailInvalid": "Invalid email",
+    "passwordMin": "Password must be at least 3 characters",
+    "register": "Register"
+  },
+  "header": {
+    "title": "Title",
+    "profile": "Go to profile",
+    "logout": "Log out",
+    "userFallback": "User"
+  },
+  "menu": {
+    "open": "Open menu",
+    "close": "Close menu",
+    "navigation": "Main navigation",
+    "closeNavigation": "Close navigation",
+    "collapse": "Collapse",
+    "expand": "Expand",
+    "sections": {
+      "users": "Users",
+      "only-user": "Users only",
+      "only-admin": "Administrators only",
+      "admin-user": "Everyone"
+    }
+  },
+  "profile": {
+    "notifications": "Notifications",
+    "notificationsPlaceholder": "Your notifications will appear here",
+    "verified": "Verified",
+    "verify": "Verify",
+    "menu": "Profile menu",
+    "my-data": {
+      "title": "My Data",
+      "name": "Name",
+      "surnames": "Surnames",
+      "phone": "Phone",
+      "email": "Email",
+      "save": "Save",
+      "changePassword": "Change Password",
+      "nameMin": "Name must be at least 2 characters",
+      "surnamesMin": "Surnames must be at least 2 characters",
+      "phoneMin": "Phone must be at least 5 characters"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "language": "Language",
+      "theme": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System",
+      "spanish": "Spanish",
+      "english": "English",
+      "emailNotifications": "Receive email notifications"
+    }
+  },
+  "only-user": {
+    "view": "View for users only"
+  },
+  "only-admin": {
+    "view": "Administrator-only view"
+  },
+  "view-admin-user": {
+    "view": "View for users and administrators"
+  }
+}

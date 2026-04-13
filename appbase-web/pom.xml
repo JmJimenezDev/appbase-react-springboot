@@ -1,0 +1,136 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>dev.jmjimenez</groupId>
+        <artifactId>appbase</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>appbase-web</artifactId>
+    <packaging>war</packaging>
+    <name>appbase-web</name>
+    <!-- ********************************************** -->
+    <!-- **************** PROPERTIES ****************** -->
+    <!-- ********************************************** -->
+    <properties>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <!-- ============================================== -->
+        <!-- ============== PLUGINS VERSIONS ============== -->
+        <!-- ============================================== -->
+        <plugin.frontend.node.version>v22.21.1</plugin.frontend.node.version>
+        <plugin.frontend.npm.version>10.9.4</plugin.frontend.npm.version>
+        <plugin.frontend.version>1.15.0</plugin.frontend.version>
+
+        <!-- Plugins de build -->
+        <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+        <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
+
+        <sonar.sources>src</sonar.sources>
+    </properties>
+    <build>
+        <finalName>appbase-web</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>${plugin.frontend.version}</version>
+                <configuration>
+                    <installDirectory>target</installDirectory>
+                    <workingDirectory>.</workingDirectory>
+                    <installDirectory>target</installDirectory>
+                    <environmentVariables>
+                        <PUBLIC_URL>${frontend.context}</PUBLIC_URL>
+                        <REACT_APP_BACKEND_CONTEXT>${backend.context}</REACT_APP_BACKEND_CONTEXT>
+                    </environmentVariables>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                        <configuration>
+                            <nodeVersion>${plugin.frontend.node.version}</nodeVersion>
+                            <npmVersion>${plugin.frontend.npm.version}</npmVersion>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>ci</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>prod build</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <arguments>run build</arguments>
+                            <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>Copy frontend</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/build</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/build</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <webResources>
+                        <resource>
+                            <directory>build</directory>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${docker-maven-plugin.version}</version>
+                <configuration>
+                    <dockerDirectory>${dockerfileDirectory}</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <includes>
+                                <include>build/**</include>
+                            </includes>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
